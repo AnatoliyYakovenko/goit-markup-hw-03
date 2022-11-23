@@ -16,8 +16,39 @@ body {
   letter-spacing: 0.03em;
   background-color: var(--white-elements);
 }
+h1, h2, h3, h4, h5, h6, p{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.section{
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.header{
+  /* padding-top: 32px;
+  padding-bottom: 32px; */
+  margin-bottom: 0;
+}
+.container{
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1200px;
+  /* background-color: tomato; */
+
+}
+.header_thumb{
+  display: flex;
+  align-items: center;
+}
 /* Logo */
 .logo {
+  margin-right: 92px;
   color: var(--black-elements);
   font-family: Raleway, cursive;
   font-weight: 700;
@@ -29,6 +60,7 @@ body {
   color: var(--blue-elements);
 }
 /* Site nav */
+
 .site-nav {
   font-weight: 500;
   font-size: 14px;
@@ -36,22 +68,36 @@ body {
   letter-spacing: 0.02em;
   text-decoration: none;
 }
-.list {
-  list-style: none;
+.site-nav_list {
+  display:flex;
 }
-.site-nav .link {
+.site-nav_item:not(:last-child){
+  margin-right: 50px;
+}
+.site-nav_link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--primary-color);
+  text-decoration: none;
 }
-.site-nav .link:hover,
-.site-nav .link:focus {
+.site-nav_link:hover,
+.site-nav_link:focus {
   color: var(--blue-elements);
 }
-.site-nav .link.current {
+.site-nav_link.current {
   color: var(--blue-elements);
 }
 /* Contacts */
 .contact {
   color: var(--secondary-color);
+}
+.contacts-nav{
+  display: flex;
+  margin-left: auto;
+}
+.contacts-nav_item:not(:last-child){
+  margin-right: 50px;
 }
 .contacts-nav .contact:hover,
 .contacts-nav .contact:focus {
@@ -59,10 +105,14 @@ body {
 }
 /* Hero */
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
   color: var(--white-elements);
   background-color: var(--secondary-background);
 }
 .hero .hero-title {
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -70,12 +120,27 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+.hero-title{
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 696px; 
+}
 
 /* Features */
 .features-list {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
 }
+.features-item{
+  width: 270px;
+}
+.features-item:not(:last-child){
+  margin-right: 30px;
+}
 .features-title {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -87,47 +152,81 @@ body {
   line-height: 1.71;
 }
 .center-title {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
 }
 /* Work */
+.work{
+  padding-top: 0;
+}
 .work-list {
+  display: flex;
+  /* margin-bottom: 188px; */
   list-style: none;
+}
+.work-list_item:not(:last-child){
+  margin-right: 30px;
 }
 /* Team */
 .team {
+  padding-top: 0;
   background-color: var(--team-background-color);
 }
 .team-list {
+  display: flex;
   list-style: none;
 }
-.members {
+.team-item {
+  margin-bottom: 34px;
   background-color: var(--white-elements);
 }
+.team-item_img{
+  margin-bottom: 30px;
+}
+.team-item:not(:last-child){
+  margin-right: 30px;
+}
 .members-name {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
 }
 .members-position {
+  margin-bottom: 30px;
   color: var(--secondary-color);
   font-size: 16px;
   line-height: 1.19;
 }
 /* Address */
 .footer {
+  
   background-color: var(--secondary-background);
 }
 .footer .logo {
   color: var(--white-elements);
 }
+.footer-logo{
+  display: block;
+  margin-right: 0;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
 .address {
+  padding-bottom: 60px;
+  display: block;
+  width: 231px;
   color: var(--white-elements);
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
+}
+.contact-footer{
+  margin-top: 9px;
+  display: block;
 }
 .address .contact-footer {
   color: var(--address-links-color);
@@ -139,7 +238,7 @@ body {
 }
 /* Buttons */
 .button {
-  background-color: var(--blue-elements);
+   background-color: var(--blue-elements);
 }
 .button.primary {
   color: var(--white-elements);
@@ -155,12 +254,16 @@ body {
   cursor: pointer;
 }
 .order-button {
+  padding: 10px 32px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   text-align: center;
   letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
 
   cursor: pointer;
 }
