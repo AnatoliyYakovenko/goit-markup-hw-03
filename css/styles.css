@@ -22,7 +22,8 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+a {
   margin: 0;
   padding: 0;
 }
@@ -33,6 +34,7 @@ ul {
 }
 img {
   margin: 0;
+  padding: 0;
 }
 button {
   margin: 0;
@@ -58,7 +60,6 @@ button {
 }
 /* Logo */
 .logo {
-  margin-right: 92px;
   color: var(--black-elements);
   font-family: Raleway, cursive;
   font-weight: 700;
@@ -79,6 +80,7 @@ button {
   text-decoration: none;
 }
 .site-nav_list {
+  margin-left: 94px;
   display: flex;
 }
 .site-nav_item:not(:last-child) {
@@ -131,9 +133,6 @@ button {
 }
 .hero-title {
   margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 696px;
 }
 
 /* Features */
@@ -188,7 +187,6 @@ button {
   list-style: none;
 }
 .team-item {
-  margin-bottom: 34px;
   background-color: var(--white-elements);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -230,7 +228,6 @@ button {
 .address {
   padding-bottom: 60px;
   display: block;
-  width: 231px;
   color: var(--white-elements);
   font-style: normal;
   font-size: 14px;
@@ -310,6 +307,7 @@ button {
   list-style: none;
 }
 .projects-list {
+  display: block;
   width: 370px;
   margin-right: 30px;
 }
@@ -319,11 +317,14 @@ button {
 .projects-link {
   text-decoration: none;
 }
+.projects-link_img {
+  display: block;
+}
+.projects-list_text {
+  padding: 20px 24px;
+}
 .projects-title {
-  padding-top: 20px;
-  padding-bottom: 4px;
-  padding-left: 24px;
-  padding-right: 24px;
+  margin-bottom: 4px;
   color: var(--primary-color);
   font-weight: 700;
   font-size: 18px;
@@ -332,9 +333,6 @@ button {
   letter-spacing: 0.06em;
 }
 .projects-type {
-  padding-bottom: 20px;
-  padding-right: 24px;
-  padding-left: 24px;
   color: var(--secondary-color);
   font-weight: 400;
   font-size: 16px;
